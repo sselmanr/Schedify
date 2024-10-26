@@ -1,0 +1,32 @@
+{
+    "id": 1,
+    "cliente": "Pedro Pascal",
+    "servicioSolicitado": "Corte de Cabello",
+    "profesional": "Margot Robbie",
+    "fecha": "2024-10-30",
+    "hora": "15:00"
+}
+{
+    "id": 2,
+    "cliente": "Elizabeth Olsen",
+    "servicioSolicitado": "Corte de Cabello",
+    "profesional": "Mark Ruffalo",
+    "fecha": "2024-10-30",
+    "hora": "15:00"
+}
+{
+    "id": 3,
+    "cliente": "Jennifer Lawrence",
+    "servicioSolicitado": "Corte de Cabello",
+    "profesional": "Bradley Cooper",
+    "fecha": "2024-11-01",
+    "hora": "14:30"
+}
+{
+    "id": 4,
+    "cliente": "Tom Hanks",
+    "servicioSolicitado": "Corte de Cabello",
+    "profesional": "Evangeline Lilly",
+    "fecha": "2024-10-30",
+    "hora": "15:00"
+}
