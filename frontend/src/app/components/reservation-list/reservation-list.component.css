@@ -1,0 +1,83 @@
+/* Estilos para cada tarjeta de reserva */
+.reservation-card {
+  background-color: rgba(34, 139, 34, 0.1); /* Verde translúcido */
+  border-left: 4px solid rgba(34, 139, 34, 0.7); /* Borde verde */
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.reservation-card:hover {
+  transform: scale(1.02);
+}
+
+.reservation-card .card-title {
+  font-weight: bold;
+  color: rgba(34, 139, 34, 0.9);
+}
+
+/* Estilos para los botones con fondo sólido */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+
+/* Ventana modal */
+/* Fondo de superposición para la modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenedor de la modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del botón de cierre */
+.close-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 6px;
+  margin-top: 20px;
+}

@@ -1,0 +1,41 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Lista de Reservas</h2>
+  
+  <div *ngIf="reservations.length > 0; else noReservations" class="row g-3">
+    <div *ngFor="let reservation of reservations" class="col-12 col-md-4">
+      <div class="card p-3 shadow-sm reservation-card">
+        <h5 class="card-title">{{ reservation.cliente }}</h5>
+        <p class="card-text mb-2"><strong>Servicio:</strong> {{ reservation.servicioSolicitado }}</p>
+        <p class="card-text mb-2"><strong>Profesional:</strong> {{ reservation.profesional }}</p>
+        <p class="card-text mb-2"><strong>Fecha:</strong> {{ reservation.fecha }}</p>
+        <p class="card-text mb-2"><strong>Hora:</strong> {{ reservation.hora }}</p>
+
+        <div class="d-flex justify-content-end mt-3">
+          <button class="btn btn-primary btn-sm me-2" (click)="viewReservation(reservation)">Ver</button>
+          <button class="btn btn-warning btn-sm me-2">Modificar</button>
+          <button class="btn btn-danger btn-sm" (click)="onDeleteReservation(reservation.id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noReservations>
+    <p class="text-center">No hay reservas disponibles.</p>
+  </ng-template>
+</div>
+
+<!-- Modal para Detalles de Reserva -->
+<div (click)="closeModal()" *ngIf="selectedReservation" class="modal-overlay">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Detalles de la Reserva</h2>
+ <!--    <p><strong>ID:</strong> {{ selectedReservation.id }}</p> -->
+    <p><strong>Cliente:</strong> {{ selectedReservation.cliente }}</p>
+    <p><strong>Servicio:</strong> {{ selectedReservation.servicioSolicitado }}</p>
+    <p><strong>Profesional:</strong> {{ selectedReservation.profesional }}</p>
+    <p><strong>Fecha:</strong> {{ selectedReservation.fecha }}</p>
+    <p><strong>Hora:</strong> {{ selectedReservation.hora }}</p>
+
+    <!-- Botón para cerrar con clases adicionales -->
+    <button (click)="closeModal()" class="btn btn-secondary close-btn">Cerrar</button>
+  </div>
+</div>
